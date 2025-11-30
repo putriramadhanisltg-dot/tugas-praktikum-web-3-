@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: #fff;
+            width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 5px 0;
+        }
+
+        .terms {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            background: #000;
+            color: #fff;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Order Form</h2>
+
+        <!-- Name -->
+        <label>Name</label>
+        <input type="text" placeholder="John Doe">
+
+        <!-- Email + Phone -->
+        <div class="row">
+            <div style="flex: 1;">
+                <label>Email</label>
+                <input type="email" placeholder="john.doe@example.com">
+            </div>
+
+            <div style="flex: 1;">
+                <label>Phone</label>
+                <input type="text" placeholder="+1 (555) 123-4567">
+            </div>
+        </div>
+
+        <!-- Order Details -->
+        <h3>Order Details</h3>
+
+        <div class="row">
+            <div style="flex: 2;">
+                <label>Product</label>
+                <select>
+                    <option>Select a product</option>
+                    <option>T-Shirt</option>
+                    <option>Jacket</option>
+                    <option>Sneakers</option>
+                </select>
+            </div>
+
+            <div style="flex: 1;">
+                <label>Quantity</label>
+                <input type="number" min="1" value="1">
+            </div>
+        </div>
+
+        <!-- Size -->
+        <label>Size</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Small</label>
+            <label><input type="checkbox"> Medium</label>
+            <label><input type="checkbox"> Large</label>
+            <label><input type="checkbox"> XL</label>
+        </div>
+
+        <!-- Color -->
+        <label>Color</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Red</label>
+            <label><input type="checkbox"> Blue</label>
+            <label><input type="checkbox"> Green</label>
+            <label><input type="checkbox"> Black</label>
+        </div>
+
+        <!-- Comments -->
+        <label>Additional Comments</label>
+        <textarea rows="3" placeholder="Enter any additional comments or instructions"></textarea>
+
+        <!-- Payment Details -->
+        <h3>Payment Details</h3>
+
+        <label>Payment Method</label>
+        <select>
+            <option>Select a payment method</option>
+            <option>Credit Card</option>
+            <option>Bank Transfer</option>
+            <option>E-Wallet</option>
+        </select>
+
+        <div class="terms">
+            <input type="checkbox">
+            <span>I accept the terms and conditions.</span>
+        </div>
+
+        <button>Submit Order</button>
+
+    </div>
+</body>
+</html>
